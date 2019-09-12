@@ -1,0 +1,8 @@
+wget https://nvidia.box.com/shared/static/06vlvedmqpqstu1dym49fo7aapgfyyu9.whl -O torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
+pip3 install numpy torch-1.2.0a0+8554416-cp36-cp36m-linux_aarch64.whl
+
+sudo apt-get install libjpeg-dev zlib1g-dev
+git clone -b v0.3.0 https://github.com/pytorch/vision torchvision
+cd torchvision
+sudo python setup.py install
+cd ../  # attempting to load torchvision from build dir will result in import error
